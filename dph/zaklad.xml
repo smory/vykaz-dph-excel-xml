@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Upravte udaje podla vasich udajov. Subor sluzi ako zdroj Vasich udajov vo vygenerovanom xml -->
+<KVDPH>
+<Identifikacia>
+<IcDphPlatitela>SKxxxxxxxxx</IcDphPlatitela>
+<Druh>R</Druh>
+<Obdobie>
+<Rok>2014</Rok>
+<Stvrtrok>X</Stvrtrok>
+</Obdobie>
+<Nazov>MENO</Nazov>
+<Stat></Stat>
+<Obec>ADRESA</Obec>
+<PSC>PSC</PSC>
+<Ulica>Huta</Ulica>
+<Cislo>XXXX</Cislo>
+<Tel></Tel>
+<Email></Email>
+</Identifikacia>
+<Transakcie>
+</Transakcie>
+</KVDPH>
