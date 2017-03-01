@@ -7,8 +7,8 @@ import datetime;
 
 
 baseXMLFilePath = "zaklad.xml";
-baseCSVFilePath = "subor_na_import.csv";
-outputXmlFilePath = "export.xml";
+baseCSVFilePath = "2017_01.csv";
+outputXmlFilePath = "2017_01.xml";
 nameSpace = {"ns0" : "https://ekr.financnasprava.sk/Formulare/XSD/kv_dph_2014.xsd"};
 
 
@@ -118,19 +118,19 @@ def vytvorFaktury(riadky):
     for riadok in riadky:
         i = i + 1;
         print(str(i));
-        if i == 1:
-            continue; 
-        
-        strings = riadok.split(";");
-        #print(str(strings));
-        da = strings[3].split(".");
-        print(str(da))
-        datum = datetime.date(int(da[2]), int(da[1]), int(da[0]));
-        #print(datum.isoformat());
-        fa = Faktura(zaklad = strings[6], dan = strings[7], den = datum.isoformat(), dodavatel = strings[12], faktura = strings[2].replace(" " , ""),
-                     odpocet = strings[7] );
-        faktury.append(fa);
-        print(str(fa));
+        try:        
+            strings = riadok.split(";");
+            #print(str(strings));
+            da = strings[3].split(".");
+            print(str(da))
+            datum = datetime.date(int(da[2]), int(da[1]), int(da[0]));
+            #print(datum.isoformat());
+            fa = Faktura(zaklad = strings[6], dan = strings[7], den = datum.isoformat(), dodavatel = strings[12], faktura = strings[2].replace(" " , ""),
+                         odpocet = strings[7] );
+            faktury.append(fa);
+            print(str(fa));
+        except:
+            print("Chyba");
     return faktury;
         
     
